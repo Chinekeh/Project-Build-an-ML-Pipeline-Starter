@@ -51,47 +51,47 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="A very basic data cleaning")
   
-    parser.add_argument(
-        "--input_artifact", 
-        type = ## INSERT TYPE HERE: str, float or int,
-        help = ## INSERT DESCRIPTION HERE,
-        required = True
-    )
+   parser.add_argument(
+    "--input_artifact", 
+    type=str,  # From MLproject: input_artifact is type string
+    help="Initial artifact to be cleaned",  # From MLproject description
+    required=True
+)
+
+  parser.add_argument(
+    "--output_artifact", 
+    type=str,  # From MLproject: output_artifact is type string
+    help="Output artifact for cleaned data",  # From MLproject description
+    required=True
+)
 
     parser.add_argument(
-        "--output_artifact", 
-        type = ## INSERT TYPE HERE: str, float or int,
-        help = ## INSERT DESCRIPTION HERE,
-        required = True
-    )
+    "--output_description", 
+    type=str,  # From MLproject: output_description is type string
+    help="Description of the output dataset",  # From MLproject description
+    required=True
+)
 
     parser.add_argument(
-        "--output_type", 
-        type = ## INSERT TYPE HERE: str, float or int,
-        help = ## INSERT DESCRIPTION HERE,
-        required = True
-    )
+    "--output_description", 
+    type=str,  # From MLproject: output_description is type string
+    help="Description of the output dataset",  # From MLproject description
+    required=True
+)
 
     parser.add_argument(
-        "--output_description", 
-        type = ## INSERT TYPE HERE: str, float or int,
-        help = ## INSERT DESCRIPTION HERE,
-        required = True
-    )
+    "--min_price", 
+    type=float,  # From MLproject: min_price is type float
+    help="Minimum house price to be considered",  # From MLproject description
+    required=True
+)
 
     parser.add_argument(
-        "--min_price", 
-        type = ## INSERT TYPE HERE: str, float or int,
-        help = ## INSERT DESCRIPTION HERE,
-        required = True
-    )
-
-    parser.add_argument(
-        "--max_price",
-        type = ## INSERT TYPE HERE: str, float or int,
-        help = ## INSERT DESCRIPTION HERE,
-        required = True
-    )
+    "--max_price",
+    type=float,  # From MLproject: max_price is type float
+    help="Maximum house price to be considered",  # From MLproject description
+    required=True
+)
 
 
     args = parser.parse_args()
